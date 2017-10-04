@@ -1,4 +1,4 @@
-.main_div{
+.login_box{
     position: absolute;
     width: 400px;
     height: 250px;
@@ -7,12 +7,14 @@
     margin: -100px 0 0 -150px;
 }
 header{
-    background-color: lightgray;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
-    font-style: italic;
     background: #B6E0FF;
-    z-index: -15;
+    color: #fdfff4;
+    opacity: 0.7;
+}
+header:hover {
+    opacity: 1.0;
 }
 #frmLogin {
     padding: 20px 60px;
@@ -44,6 +46,10 @@ header{
     border-radius: 4px;
     display: inline-block;
     text-align:center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
 }
 .logout-button {
     color: #09F;
