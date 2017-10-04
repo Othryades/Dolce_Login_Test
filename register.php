@@ -24,14 +24,14 @@ if(!empty($_POST["register-user"])) {
         require_once("registerController.php");
         $db_handle = new registerController();
         $query = "INSERT INTO users (user_name, password, email) VALUES
-		('" . $_POST["userName"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["userEmail"] . "')";
+		('" . $_POST["userName"] . "', '" . password_hash($_POST["password"], PASSWORD_DEFAULT ) . "', '" . $_POST["userEmail"] . "')";
         $result = $db_handle->insertQuery($query);
         if(!empty($result)) {
             $error_message = "";
             $success_message = "You have registered successfully!";
             unset($_POST);
         } else {
-            $error_message = "Problem in registration. Try Again!";
+            $error_message = "Something went wrong. Try Again!";
         }
     }
 }
