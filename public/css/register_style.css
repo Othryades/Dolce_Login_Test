@@ -2,6 +2,13 @@ body{
     width:610px;
     font-family:calibri;
 }
+.container{
+    position: absolute;
+    width: 610px;
+    top: 180px;
+    left: 500px;
+    margin: -100px 0 0 -150px;
+}
 .error-message {
     padding: 7px 10px;
     background: #fff1f2;
@@ -44,4 +51,8 @@ body{
     cursor: pointer;
     border-radius: 4px;
     margin-left: 10px;
+}
+
+#reg_title{
+    text-align: center;
 }

@@ -43,6 +43,8 @@
                 </div>
             </div>
         <?php } ?>
-
+        <p>
+            <a href="http://localhost/login_dolce/register.php">Sign up</a>
+        </p>
     </body>
 </html>

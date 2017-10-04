@@ -41,37 +41,45 @@ if(!empty($_POST["register-user"])) {
         <title>PHP User Registration Form</title>
         <link rel ="stylesheet" href ="public/css/register_style.css" type="text/css">
     </head>
+
     <body>
-        <form name="frmRegistration" method="post" action="">
-            <table border="0" width="500" align="center" class="demo-table">
-                <?php if(!empty($success_message)) { ?>
-                    <div class="success-message"><?php if(isset($success_message)) echo $success_message; ?></div>
-                <?php } ?>
-                <?php if(!empty($error_message)) { ?>
-                    <div class="error-message"><?php if(isset($error_message)) echo $error_message; ?></div>
-                <?php } ?>
-                <tr>
-                    <td>User Name</td>
-                    <td><input type="text" class="demoInputBox" name="userName" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" class="demoInputBox" name="password" value=""></td>
-                </tr>
-                <tr>
-                    <td>Confirm Password</td>
-                    <td><input type="password" class="demoInputBox" name="confirm_password" value=""></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="text" class="demoInputBox" name="userEmail" value="<?php if(isset($_POST['userEmail'])) echo $_POST['userEmail']; ?>"></td>
-                </tr>
-                <tr>
-                    <td colspan=2>
-                        <input type="submit" name="register-user" value="Register" class="btnRegister">
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <div class="container">
+            <form name="frmRegistration" method="post" action="">
+                <h3 id="reg_title">Please complete your registration by filling the form. </h3>
+                <table border="0" width="500" align="center" class="demo-table">
+
+                    <?php if(!empty($success_message)) { ?>
+                        <div class="success-message"><?php if(isset($success_message)) echo $success_message; ?></div>
+                    <?php } ?>
+                    <?php if(!empty($error_message)) { ?>
+                        <div class="error-message"><?php if(isset($error_message)) echo $error_message; ?></div>
+                    <?php } ?>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" class="demoInputBox" name="userName" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" class="demoInputBox" name="password" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input type="password" class="demoInputBox" name="confirm_password" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" class="demoInputBox" name="userEmail" value="<?php if(isset($_POST['userEmail'])) echo $_POST['userEmail']; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            <input type="submit" name="register-user" value="Register" class="btnRegister">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <p>
+            <a href="http://localhost/login_dolce/">Go back to login</a>
+        </p>
     </body>
 </html>
