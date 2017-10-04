@@ -3,7 +3,7 @@
 
 ## Features
 
-* Login trough session
+* Login with session
 * Register
 
 
@@ -12,7 +12,7 @@
 
 1. Download all the files in localohost folder.
 2. Run in Localhost (Uwamp, Xampp).
-3. Sign up
+3. Sign up.
 4. Log in!
 
 
