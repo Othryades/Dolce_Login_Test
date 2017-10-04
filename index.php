@@ -31,6 +31,9 @@
                             </div>
 
                         </form>
+                        <p>
+                            <a href="http://localhost/login_dolce/register.php">Sign up</a>
+                        </p>
                         <?php
                     } else {
                     $result = mysqlI_query($conn,"SELECT * FROM users WHERE user_id='" . $_SESSION["user_id"] . "'");
@@ -40,11 +43,11 @@
                         <div class="member-dashboard">Welcome <?php echo ($user['user_name']); ?>, You have successfully logged in.<br>
                             Click to <input type="submit" name="logout" value="Logout" class="logout-button">.</div>
                     </form>
+
                 </div>
+
             </div>
         <?php } ?>
-        <p>
-            <a href="http://localhost/login_dolce/register.php">Sign up</a>
-        </p>
+
     </body>
 </html>
